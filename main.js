@@ -385,6 +385,7 @@ scrollTopBtn && scrollTopBtn.addEventListener('keydown', e => {
 });
 
 
+
 // --- Hamburger Menu ---
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
@@ -454,13 +455,12 @@ if (navToggle && navLinks) {
     mobileCloseBtn.addEventListener('touchstart', handleCloseBtn, { passive: false });
   }
 
-  // Navigation links - handle both click and touch
+  // Navigation links - handle only click, not touchstart
   navLinks.querySelectorAll('a').forEach(link => {
-    const handleLinkClick = (e) => {
+    link.addEventListener('click', () => {
       closeNav();
-    };
-    link.addEventListener('click', handleLinkClick);
-    link.addEventListener('touchstart', handleLinkClick, { passive: true });
+      // Do NOT call preventDefault or stopPropagation here!
+    });
   });
 
   window.addEventListener('keydown', e => {
@@ -469,4 +469,3 @@ if (navToggle && navLinks) {
     }
   });
 }
-
