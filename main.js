@@ -460,7 +460,7 @@ if (navToggle && navLinks) {
       closeNav();
     };
     link.addEventListener('click', handleLinkClick);
-    link.addEventListener('touchstart', handleLinkClick, { passive: false });
+    link.addEventListener('touchstart', handleLinkClick, { passive: true });
   });
 
   window.addEventListener('keydown', e => {
