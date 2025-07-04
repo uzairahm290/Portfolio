@@ -384,6 +384,7 @@ scrollTopBtn && scrollTopBtn.addEventListener('keydown', e => {
   }
 });
 
+
 // --- Hamburger Menu ---
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
@@ -391,13 +392,25 @@ const navOverlay = document.querySelector('.nav-overlay');
 
 function closeNav() {
   navLinks.classList.remove('open');
-  navOverlay && (navOverlay.style.display = 'none');
+  navToggle.classList.remove('open');
+  if (navOverlay) {
+    navOverlay.classList.remove('active');
+    setTimeout(() => {
+      navOverlay.style.display = 'none';
+    }, 400);
+  }
   document.body.style.overflow = '';
 }
 
 function openNav() {
   navLinks.classList.add('open');
-  navOverlay && (navOverlay.style.display = 'block');
+  navToggle.classList.add('open');
+  if (navOverlay) {
+    navOverlay.style.display = 'block';
+    setTimeout(() => {
+      navOverlay.classList.add('active');
+    }, 10);
+  }
   document.body.style.overflow = 'hidden';
 }
 
@@ -414,6 +427,12 @@ if (navToggle && navLinks) {
     navOverlay.addEventListener('click', closeNav);
   }
 
+  // Mobile close button
+  const mobileCloseBtn = navLinks.querySelector('.mobile-close-btn');
+  if (mobileCloseBtn) {
+    mobileCloseBtn.addEventListener('click', closeNav);
+  }
+
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', closeNav);
   });
@@ -424,3 +443,4 @@ if (navToggle && navLinks) {
     }
   });
 }
+
