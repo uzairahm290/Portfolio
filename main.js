@@ -240,7 +240,7 @@ const awardDetails = {
     icon: '📜',
     title: 'Blue Team Junior Analyst (BJTA)',
     issuer: 'Security Blue Teams',
-    date: '2023',
+    date: '2024',
     description: 'Earned the BJTA certification, validating skills in blue team operations, threat detection, and SOC workflows.',
     link: '',
     certificate: 'images/bjta.png'
@@ -383,8 +383,6 @@ scrollTopBtn && scrollTopBtn.addEventListener('keydown', e => {
     scrollTopBtn.blur();
   }
 });
-
-
 
 // --- Hamburger Menu ---
 const navToggle = document.querySelector('.nav-toggle');
