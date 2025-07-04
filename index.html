@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uzair Ahmad | Cybersecurity Enthusiast</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="bg-network"></canvas>
+  <header>
+    <nav class="glass-nav">
+      <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      <h1><span class="hacker-logo" aria-label="Hacker Logo" tabindex="0">
+        <span class="hacker-svg-wrapper">
+          <svg width="48" height="48" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;">
+            <g class="hacker-hood">
+              <path d="M32 8C18 8 8 24 8 40c0 4 2 8 8 8h32c6 0 8-4 8-8C56 24 46 8 32 8z" fill="#222"/>
+              <path d="M32 8c-8 0-16 8-16 24 0 4 2 8 8 8h16c6 0 8-4 8-8 0-16-8-24-16-24z" fill="#333"/>
+            </g>
+            <g class="hacker-face">
+              <ellipse cx="32" cy="36" rx="8" ry="6" fill="#ffe0b2"/>
+              <ellipse cx="28" cy="36" rx="1.5" ry="2" fill="#222"/>
+              <ellipse cx="36" cy="36" rx="1.5" ry="2" fill="#222"/>
+              <rect x="29" y="39" width="6" height="2" rx="1" fill="#c48a6a"/>
+            </g>
+            <g class="hacker-laptop">
+              <rect x="20" y="44" width="24" height="8" rx="2" fill="#bbb"/>
+              <rect x="24" y="46" width="16" height="4" rx="1" fill="#e0e0e0"/>
+              <rect x="30" y="50" width="4" height="1" rx="0.5" fill="#888"/>
+              <rect x="28" y="52" width="8" height="2" rx="1" fill="#888"/>
+            </g>
+            <g class="hacker-hands">
+              <ellipse cx="24" cy="48" rx="2" ry="1.2" fill="#c48a6a"/>
+              <ellipse cx="40" cy="48" rx="2" ry="1.2" fill="#c48a6a"/>
+            </g>
+          </svg>
+        </span>
+      </span></h1>
+      <ul class="nav-links">
+        <li><a href="#about" data-section="about">About</a></li>
+        <li><a href="#skills" data-section="skills">Skills</a></li>
+        <li><a href="#experience" data-section="experience">Experience</a></li>
+        <li><a href="#education" data-section="education">Education</a></li>
+        <li><a href="#projects" data-section="projects">Projects</a></li>
+        <li><a href="#contact" data-section="contact">Contact</a></li>
+      </ul>
+      <div class="nav-overlay"></div>
+      <button class="mode-toggle" aria-label="Toggle dark/light mode"><span class="mode-icon"></span></button>
+    </nav>
+  </header>
+  <div id="hero-bg"></div>
+  <section id="hero" data-section="hero">
+    <div class="hero-bg-image"></div>
+    <div class="hero-content">
+      <h2><span class="typewriter"></span></h2>
+      <p>Cybersecurity Enthusiast</p>
+      <a href="images/cv.pdf" class="cv-btn" target="_blank" rel="noopener">Download CV</a>
+    </div>
+  </section>
+  <section id="about" data-section="about">
+    <h2>About Me</h2>
+    <div class="about-wrapper">
+      <div class="about-pic">
+        <img src="images/uzair.jpg" alt="Uzair Ahmad profile picture" />
+      </div>
+      <div class="about-info">
+        <h3 class="about-name">Uzair Ahmad</h3>
+        <div class="about-title">Cybersecurity Enthusiast</div>
+        <p class="about-desc">Cybersecurity learner exploring ethical hacking, web vulnerabilities, and CTFs. Passionate about hands-on learning and real-world challenges</p>
+        <div class="about-links-row">
+          <div class="hacking-profiles">
+            <span>Hacking Profiles:</span>
+            <a href="https://tryhackme.com/p/ShadowByte3301" target="_blank" rel="noopener" title="TryHackMe">
+              <img src="images/tryhackme.png" alt="TryHackMe" style="width:28px;height:28px;vertical-align:middle;">
+            </a>
+            <a href="https://www.hackthebox.com/profile/yourprofile" target="_blank" rel="noopener" title="Hack The Box">
+              <img src="images/hackthebox.png" alt="Hack The Box" style="width:28px;height:28px;vertical-align:middle;">
+            </a>
+          </div>
+          <div class="about-socials">
+            <span>Social Accounts:</span>
+            <a href="https://instagram.com/_uzairahm_" target="_blank" rel="noopener" title="Instagram">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
+            </a>
+            <a href="https://twitter.com/_uzairahm_" target="_blank" rel="noopener" title="Twitter">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 22.4 1.64a9.09 9.09 0 0 1-2.88 1.1A4.52 4.52 0 0 0 16.11 0c-2.5 0-4.52 2.02-4.52 4.52 0 .35.04.7.11 1.03C7.69 5.4 4.07 3.67 1.64 1.15c-.38.65-.6 1.4-.6 2.2 0 1.52.77 2.86 1.94 3.65A4.48 4.48 0 0 1 .96 6.1v.06c0 2.13 1.52 3.91 3.54 4.31-.37.1-.76.16-1.16.16-.28 0-.55-.03-.81-.08.55 1.72 2.16 2.97 4.07 3A9.05 9.05 0 0 1 0 19.54a12.8 12.8 0 0 0 6.92 2.03c8.3 0 12.85-6.87 12.85-12.85 0-.2 0-.39-.01-.58A9.22 9.22 0 0 0 23 3z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="skills" data-section="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <img src="images/cpp_512x512.png" alt="C++" />
+        <span class="skill-name">C++</span>
+      </div>
+      <div class="skill-card">
+        <img src="images/c.png" alt="C" />
+        <span class="skill-name">C</span>
+      </div>
+      <div class="skill-card">
+        <img src="images/python.png" alt="Python" />
+        <span class="skill-name">Python</span>
+      </div>
+      <div class="skill-card">
+        <img src="images/html.png" alt="HTML" />
+        <span class="skill-name">HTML</span>
+      </div>
+      <div class="skill-card">
+        <img src="images/javascript.png" alt="JavaScript" />
+        <span class="skill-name">JavaScript</span>
+      </div>
+      <div class="skill-card">
+        <img src="images/css.png" alt="CSS" />
+        <span class="skill-name">CSS</span>
+      </div>
+      <div class="skill-card">
+        <img src="images/git.png" alt="Git" />
+        <span class="skill-name">Git</span>
+      </div>
+      <div class="skill-card">
+        <img src="images/bash.png" alt="Bash" />
+        <span class="skill-name">Bash</span>
+      </div>
+      <div class="skill-card">
+        <img src="images/react.png" alt="React" />
+        <span class="skill-name">React</span>
+      </div>
+      <div class="skill-card">
+        <img src="images/mysql.png" alt="MySQL" />
+        <span class="skill-name">MySQL</span>
+      </div>
+      <div class="skill-card">
+        <img src="images/solidity.png" alt="Solidity" />
+        <span class="skill-name">Solidity</span>
+      </div>
+      <div class="skill-card">
+        <img src="images/nmap.png" alt="Nmap" />
+        <span class="skill-name">Nmap</span>
+      </div>
+      <div class="skill-card">
+        <img src="images/wireshark.png" alt="Wireshark" />
+        <span class="skill-name">Wireshark</span>
+      </div>
+      <div class="skill-card">
+        <img src="images/ethereum.png" alt="Ethereum" />
+        <span class="skill-name">Ethereum</span>
+      </div>
+      <div class="skill-card">
+        <img src="images/metasploit.png" alt="Metasploit" />
+        <span class="skill-name">Metasploit</span>
+      </div>
+    </div>
+  </section>
+  <section id="experience" data-section="experience">
+    <h2>Experience</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-icon">💼</div>
+        <div class="timeline-main">
+          <div class="timeline-date">Feb 2025 - May 2025</div>
+          <div class="timeline-content">
+            <h3>Deputy Organizer | SOFTEC Cyber Security CTF</h3>
+            <ul>
+              <li>Developed CTF challenges in Forensics, Cryptography, and OSINT for over 100+ participants.</li>
+              <li>Acted as a core team member, contributing to challenge design, testing, and event execution.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-icon">🛡️</div>
+        <div class="timeline-main">
+          <div class="timeline-date">Oct 2024 - Dec 2024</div>
+          <div class="timeline-content">
+            <h3>Cybersecurity Intern | Hackify Cyber Security</h3>
+            <ul>
+              <li>Worked on real-world projects focused on web vulnerabilities like SQL Injection, XSS, and CSRF.</li>
+              <li>Performed vulnerability scans and analyzed results to identify and report security flaws.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="education" data-section="education">
+    <h2>Education</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-icon">🎓</div>
+        <div class="timeline-main">
+          <div class="timeline-date">Aug 2023 - Present</div>
+          <div class="timeline-content">
+            <h3>BS (Computer Science) | FAST NUCES</h3>
+            <ul>
+              <li>Relevant Coursework: Programming Fundamentals, Data Structures, Assembly Language, etc.</li>
+              <li>Gained proficiency in Assembly Language and its application in low-level programming.</li>
+              <li>Strong foundation in programming fundamentals and problem-solving.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-icon">🏫</div>
+        <div class="timeline-main">
+          <div class="timeline-date">Aug 2021 - June 2023</div>
+          <div class="timeline-content">
+            <h3>Intermediate in Computer Science | Punjab College</h3>
+            <ul>
+              <li>Secured overall 3rd position in the Faisalabad Board during the first year of intermediate studies.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="projects" data-section="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card" data-project="jarvis">
+        <div class="project-image modern-image">
+          <img src="images/jarvis.jpeg" alt="Voice Assistant (Jarvis)">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Voice Assistant (Jarvis)</h3>
+          <p class="project-desc">Built a Python voice assistant with speech-to-text, email features, and typing mode controls.</p>
+          <div class="project-tech-label">Tech Stack</div>
+          <div class="project-tech-stack">
+            <span class="tech">Python</span>
+            <span class="tech">SpeechRecognition</span>
+            <span class="tech">Selenium</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/uzairahm290/JARVIS" class="project-btn" target="_blank">
+              <svg class="github-logo" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="vertical-align:middle;margin-right:6px;"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.66-.22.66-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.1-1.46-1.1-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.8c.85.004 1.71.12 2.51.35 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85 0 1.33-.01 2.4-.01 2.73 0 .27.16.58.67.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card" data-project="solitaire">
+        <div class="project-image modern-image">
+          <img src="images/solitaire.png" alt="Solitaire Game Engine">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Solitaire Game Engine</h3>
+          <p class="project-desc">Developed a C++ game engine with doubly linked lists and undo functionality.</p>
+          <div class="project-tech-label">Tech Stack</div>
+          <div class="project-tech-stack">
+            <span class="tech">C++</span>
+            <span class="tech">OOP</span>
+            <span class="tech">DSA</span>
+
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/uzairahm290/SolitaireGame" class="project-btn" target="_blank">
+              <svg class="github-logo" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="vertical-align:middle;margin-right:6px;"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.66-.22.66-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.1-1.46-1.1-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.8c.85.004 1.71.12 2.51.35 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85 0 1.33-.01 2.4-.01 2.73 0 .27.16.58.67.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card" data-project="mindgrid">
+        <div class="project-image modern-image">
+          <img src="images/soduko.png" alt="Mind Grid (Sudoku in Assembly)">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Mind Grid (Sudoku)</h3>
+          <p class="project-desc">Developed a Sudoku game in 8088 Assembly, focusing on input handling, board display, and validation rules.</p>
+          <div class="project-tech-label">Tech Stack</div>
+          <div class="project-tech-stack">
+            <span class="tech">Assembly</span>
+            <span class="tech">8088</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/uzairahm290/Mind-Grid-Sudoku-Assembly" class="project-btn" target="_blank">
+              <svg class="github-logo" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="vertical-align:middle;margin-right:6px;"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.66-.22.66-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.1-1.46-1.1-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.8c.85.004 1.71.12 2.51.35 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85 0 1.33-.01 2.4-.01 2.73 0 .27.16.58.67.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card" data-project="brickbreaker">
+        <div class="project-image modern-image">
+          <img src="images/brickbreaker.png" alt="Brick Breaker">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Brick Breaker</h3>
+          <p class="project-desc">Developed a simple Brick Breaker game using C++ with ASCII graphics and basic game logic, including paddle control, ball movement, and brick destruction.</p>
+          <div class="project-tech-label">Tech Stack</div>
+          <div class="project-tech-stack">
+            <span class="tech">C++</span>
+            <span class="tech">Game Dev</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/uzairahm290/Pixel-Breaker" class="project-btn" target="_blank">
+              <svg class="github-logo" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="vertical-align:middle;margin-right:6px;"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.66-.22.66-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.1-1.46-1.1-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.8c.85.004 1.71.12 2.51.35 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85 0 1.33-.01 2.4-.01 2.73 0 .27.16.58.67.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card" data-project="socialsphere">
+        <div class="project-image modern-image">
+          <img src="images/social.jpg" alt="Social Sphere">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Social Sphere</h3>
+          <p class="project-desc">Social Sphere is a console-based social networking application built in C++, designed to demonstrate the principles of Object-Oriented Programming (OOP).</p>
+          <div class="project-tech-label">Tech Stack</div>
+          <div class="project-tech-stack">
+            <span class="tech">C++</span>
+            <span class="tech">OOP</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/uzairahm290/Social-Sphere" class="project-btn" target="_blank">
+              <svg class="github-logo" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="vertical-align:middle;margin-right:6px;"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.66-.22.66-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.1-1.46-1.1-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.8c.85.004 1.71.12 2.51.35 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85 0 1.33-.01 2.4-.01 2.73 0 .27.16.58.67.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="awards" data-section="awards">
+    <h2>Awards & Certificates</h2>
+    <div class="awards-grid">
+      <div class="award-card" data-award="techverse">
+        <div class="award-icon">🏆</div>
+        <div class="award-info">
+          <div class="award-title">Capture The Flag(CTF)  Winner </div>
+          <div class="award-issuer">Techverse by UMT</div>
+          <div class="award-date">2025</div>
+        </div>
+      </div>
+      <div class="award-card" data-award="ignite">
+        <div class="award-icon">🏆</div>
+        <div class="award-info">
+          <div class="award-title">2nd Place in Blue Teaming Regional Round</div>
+          <div class="award-issuer">Cybersecurity Hackathon by Ignite</div>
+          <div class="award-date">2025</div>
+        </div>
+      </div>
+      <div class="award-card" data-award="cisco">
+        <div class="award-icon">📜</div>
+        <div class="award-info">
+          <div class="award-title">Google Cybersecurity Professional</div>
+          <div class="award-issuer">Google</div>
+          <div class="award-date">2025</div>
+        </div>
+      </div>
+      <div class="award-card" data-award="bjta1">
+        <div class="award-icon">📜</div>
+        <div class="award-info">
+          <div class="award-title">Blue Team Junior Analyst (BJTA)</div>
+          <div class="award-issuer">Security Blue Teams</div>
+          <div class="award-date">2023</div>
+        </div>
+      </div>
+      <!-- Add more award-card blocks as needed -->
+    </div>
+    <div id="award-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-body"></div>
+      </div>
+    </div>
+  </section>
+  <section id="contact" data-section="contact">
+    <h2>Contact</h2>
+    <form id="contact-form" action="https://formspree.io/f/xjkrzyyr" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <div class="form-message"></div>
+  </section>
+  <footer>
+    <div class="footer-gradient"></div>
+    <div class="footer-content">
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/uzairahmad313/" title="LinkedIn" class="footer-icon" target="_blank" rel="noopener"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 8a4 4 0 0 1 4 4v4"/><line x1="8" y1="11" x2="8" y2="16"/><line x1="8" y1="8" x2="8" y2="8"/></svg></a>
+        <a href="mailto:uzairahm313@gmail.com" title="Email" class="footer-icon" rel="noopener"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg></a>
+        <a href="https://github.com/uzairahm290" title="GitHub" class="footer-icon" target="_blank" rel="noopener"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.66-.22.66-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.1-1.46-1.1-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.8c.85.004 1.71.12 2.51.35 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85 0 1.33-.01 2.4-.01 2.73 0 .27.16.58.67.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg></a>
+      </div>
+      <div class="footer-bar"></div>
+      <div class="footer-quote">"Securing the future, one byte at a time."</div>
+      <p>&copy; Uzair Ahmad 2025</p>
+    </div>
+  </footer>
+  <button id="scrollTopBtn" aria-label="Scroll to top">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3l7 4v5c0 5-3.5 9-7 9s-7-4-7-9V7l7-4z"/>
+    </svg>
+  </button>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html> 
