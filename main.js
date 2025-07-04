@@ -400,6 +400,8 @@ function closeNav() {
     }, 400);
   }
   document.body.style.overflow = '';
+  // Remove any touch-action restrictions
+  document.body.style.touchAction = '';
 }
 
 function openNav() {
@@ -412,29 +414,53 @@ function openNav() {
     }, 10);
   }
   document.body.style.overflow = 'hidden';
+  // Prevent body scrolling on mobile
+  document.body.style.touchAction = 'none';
 }
 
 if (navToggle && navLinks) {
-  navToggle.addEventListener('click', () => {
+  // Handle both click and touch events for mobile compatibility
+  const handleNavToggle = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
     if (navLinks.classList.contains('open')) {
       closeNav();
     } else {
       openNav();
     }
-  });
+  };
+
+  navToggle.addEventListener('click', handleNavToggle);
+  navToggle.addEventListener('touchstart', handleNavToggle, { passive: false });
 
   if (navOverlay) {
-    navOverlay.addEventListener('click', closeNav);
+    const handleOverlayClick = (e) => {
+      e.preventDefault();
+      closeNav();
+    };
+    navOverlay.addEventListener('click', handleOverlayClick);
+    navOverlay.addEventListener('touchstart', handleOverlayClick, { passive: false });
   }
 
-  // Mobile close button
+  // Mobile close button - handle both click and touch
   const mobileCloseBtn = navLinks.querySelector('.mobile-close-btn');
   if (mobileCloseBtn) {
-    mobileCloseBtn.addEventListener('click', closeNav);
+    const handleCloseBtn = (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      closeNav();
+    };
+    mobileCloseBtn.addEventListener('click', handleCloseBtn);
+    mobileCloseBtn.addEventListener('touchstart', handleCloseBtn, { passive: false });
   }
 
+  // Navigation links - handle both click and touch
   navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', closeNav);
+    const handleLinkClick = (e) => {
+      closeNav();
+    };
+    link.addEventListener('click', handleLinkClick);
+    link.addEventListener('touchstart', handleLinkClick, { passive: false });
   });
 
   window.addEventListener('keydown', e => {
